@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.app</groupId>
-  <artifactId>manageroauth5</artifactId>
+  <artifactId>manageroauth</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
    <properties>
@@ -102,8 +102,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+                    <executable>true</executable>
+                    <mainClass>com.app.OauthApplication</mainClass>
+                    <outputDirectory>${outputDirectory}</outputDirectory>
+                </configuration>
 			</plugin>
 		</plugins>
+
 </build>
-  
+
 </project>
